@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Library</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>📚 My Digital Library</h1>
+        <nav>
+            <button id="addItemBtn">+ Add New Item</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filters">
+            <input type="text" id="searchInput" placeholder="Search your library...">
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="book">Books</option>
+                <option value="article">Articles</option>
+                <option value="pdf">PDFs</option>
+            </select>
+        </section>
+
+        <section id="libraryItems" class="items-grid">
+            <!-- Items will be loaded here -->
+        </section>
+    </main>
+
+    <!-- Add Item Modal -->
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Item</h2>
+            <form id="addItemForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author/Creator">
+                <select id="category" required>
+                    <option value="book">Book</option>
+                    <option value="article">Article</option>
+                    <option value="pdf">PDF</option>
+                    <option value="video">Video</option>
+                </select>
+                <textarea id="description" placeholder="Description"></textarea>
+                <button type="submit">Add to Library</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
